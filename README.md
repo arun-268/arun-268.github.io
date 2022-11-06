@@ -1,9 +1,3 @@
----
-Title: "Polynomial Regression"
-Format: html
-Editor: visual
-Author: Arun & Nina
----
 
 Structure of the assignment
 
