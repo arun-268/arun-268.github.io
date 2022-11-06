@@ -1,8 +1,8 @@
 ---
-title: "polyRegression"
-format: html
-editor: visual
-author: Arun & Nina
+Title: "polyRegression"
+Format: html
+Editor: visual
+Author: Arun & Nina
 ---
 
 Structure of the assignment
