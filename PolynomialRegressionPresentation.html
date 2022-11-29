@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.189">
 
   <meta name="author" content="Arun &amp; Zhongyi">
-  <title>Presentation on Polynomial Regression</title>
+  <title>Polynomial Regression</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,6 +33,8 @@
   <link href="PolynomialRegressionPresentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="PolynomialRegressionPresentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="PolynomialRegressionPresentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="PolynomialRegressionPresentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="PolynomialRegressionPresentation_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="PolynomialRegressionPresentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -325,8 +327,8 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Presentation on Polynomial Regression</h1>
-  <p class="subtitle">using CDC data with Application for Predicting RSV in USA</p>
+  <h1 class="title">Polynomial Regression</h1>
+  <p class="subtitle">using CDC data Predict RSV in USA</p>
   <p class="author">Arun &amp; Zhongyi</p>
 </section>
 
@@ -338,21 +340,45 @@
 <li class="fragment"><p>According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations&nbsp;and 100 to 300 deaths among children under 5.</p></li>
 </ul>
 </section>
-<section id="situation-in-usa" class="slide level2 smaller">
-<h2>Situation in USA</h2>
+<section id="trend-in-usa" class="slide level2 smaller">
+<h2>Trend in USA</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">RSV Cases</a></li><li><a href="#tabset-1-2">2019-2022</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/paste-554DC9A6.png" width="600"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
 <ul>
 <li class="fragment">In most regions of the United States, RSV circulation starts in the fall and peaks in the winter.</li>
 </ul>
-
-<img data-src="images/paste-554DC9A6.png" width="500" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-
-
-<img data-src="images/paste-F2E32D2F.png" width="500" class="r-stretch quarto-figure-center"><ul>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/paste-F2E32D2F.png" width="900"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<ul>
 <li class="fragment"><p>With mask-wearing and physical distancing for COVID-19, there were fewer cases of RSV in 2020.</p></li>
 <li class="fragment"><p>RSV cases began to increase in spring 2021 when safety measures relaxed with the arrival of COVID-19 vaccines.</p></li>
 <li class="fragment"><p>This year, RSV in multiple U.S. regions are nearing seasonal peak levels.</p></li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="other-researchs" class="slide level2 smaller">
 <h2>Other Research’s</h2>
@@ -371,24 +397,24 @@
 <p>A case is defined by laboratory-confirmed RSV in a person who Lives in a defined RSV-NET surveillance area AND Tests positive for RSV withn 14 days before or during hospitalization.</p>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Data Collection</a></li><li><a href="#tabset-1-2">Initial Observation</a></li><li><a href="#tabset-1-3">Data Definition</a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Data Collection</a></li><li><a href="#tabset-2-2">Initial Observation</a></li><li><a href="#tabset-2-3">Data Definition</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1">
+<div id="tabset-2-1">
 <ul>
 <li class="fragment"><p>Data set for this research is from RSV Hospitalization Surveillance Network (RSV-NET) (one of CDC research and surveillance platforms).</p></li>
-<li class="fragment"><p>They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.[8]</p></li>
+<li class="fragment"><p>They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.</p></li>
 <li class="fragment"><p>RSV-NET has been collecting RSV-associated hospitalizations in adults and children since 2018-2019 season from 58 counties in 12 states, including California, Colorado, Connecticut, Georgia, Maryland, Michigan, Minnesota, New Mexico, New York, Oregon, Tennessee, and Utah.</p></li>
 <li class="fragment"><p>Time frame: In season 2018-2019, 2019-2020, data collected is from October 1 to April 30. In season 2020-2021, 2021-2022, 2022-2023, data collected is from October 1 to October 1 next year.</p></li>
 </ul>
 </div>
-<div id="tabset-1-2">
+<div id="tabset-2-2">
 <ul>
 <li class="fragment">Data was last updated on 17th November 2022.</li>
 <li class="fragment">Oneyear Data: Rate/wk for 52 weeks(YTD)</li>
 <li class="fragment">Twoyear Data: Rate/wk for 104 weeks(YTD)</li>
 </ul>
 </div>
-<div id="tabset-1-3" class="scrollable">
+<div id="tabset-2-3" class="scrollable">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/paste-B56B095E.png" width="650"></p>
@@ -402,16 +428,16 @@
 <h2>Why Polynomial Regression</h2>
 <p>Simple Linear Regression algorithm only works when the relationship between the data is linear, suppose if we have non-linear data then linear regression will not be capable to draw a best-fit line and it fails in such conditions.</p>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Non-Linear Data</a></li><li><a href="#tabset-2-2">Curvilinear</a></li><li><a href="#tabset-2-3">Polynomial Degree</a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Non-Linear Data</a></li><li><a href="#tabset-3-2">Curvilinear</a></li><li><a href="#tabset-3-3">Polynomial Degree</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1">
+<div id="tabset-3-1">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/Non-Linear.gif" width="600"></p>
 </figure>
 </div>
 </div>
-<div id="tabset-2-2">
+<div id="tabset-3-2">
 <p>Non-linear relationship between dependent and independent variables we add some polynomial terms to linear regression to convert it into Polynomial regression.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -419,13 +445,8 @@
 </figure>
 </div>
 </div>
-<div id="tabset-2-3">
-<p>In statistics, polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/polynomial_regression_fit.gif" width="600"></p>
-</figure>
-</div>
+<div id="tabset-3-3">
+<p>In statistics, polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x. y = 𝛽0 + 𝛽1x1 + 𝛽2x12 + … + 𝛽nx1n <img data-src="images/polynomial_regression_fit.gif" data-fig-align="center" width="600"></p>
 </div>
 </div>
 </div>
@@ -443,6 +464,7 @@
   <script src="PolynomialRegressionPresentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="PolynomialRegressionPresentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="PolynomialRegressionPresentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="PolynomialRegressionPresentation_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="PolynomialRegressionPresentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -464,7 +486,8 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': true,
  
         // Display controls in the bottom right corner
@@ -485,7 +508,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -635,7 +658,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

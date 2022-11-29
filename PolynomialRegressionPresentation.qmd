@@ -1,12 +1,15 @@
 ---
-title: "Presentation on Polynomial Regression"
-subtitle: "using CDC data with Application for Predicting RSV in USA"
-author: Arun & Zhongyi
+title: "Polynomial Regression"
+subtitle: "using CDC data Predict RSV in USA"
+author: Arun  &  Zhongyi
 format: 
   revealjs:
-    
+    slide-number: true
+    #footer:"https://arun-268.github.io/RSVPolynomialRegression/"
     theme: moon
     incremental: true 
+    chalkboard: true
+    
     smaller: true
     scrollable: true
     width: 1600
@@ -22,23 +25,37 @@ editor: visual
 
 -   According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations and 100 to 300 deaths among children under 5.
 
-## Situation in USA {.smaller}
+## Trend in USA {.smaller}
 
+::: {.panel-tabset}
+#### RSV Cases
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/paste-554DC9A6.png){fig-align="right" width="600"}
+:::
+
+::: {.column width="50%"}
 -   In most regions of the United States, RSV circulation starts in the fall and peaks in the winter.
+:::
+::::
+#### 2019-2022
+:::: {.columns}
 
-![](images/paste-554DC9A6.png){fig-align="center" width="500"}
+::: {.column width="60%"}
+![](images/paste-F2E32D2F.png){fig-align="left" width="900"}
+:::
 
----
-
-![](images/paste-F2E32D2F.png){fig-align="center" width="500"}
-
+::: {.column width="40%"}
 -   With mask-wearing and physical distancing for COVID-19, there were fewer cases of RSV in 2020.
 
 -   RSV cases began to increase in spring 2021 when safety measures relaxed with the arrival of COVID-19 vaccines.
 
 -   This year, RSV in multiple U.S. regions are nearing seasonal peak levels.
-
-
+:::
+::::
+:::
 ## Other Research's {.smaller}
 
 -   Respiratory syncytial virus (RSV) infection trend has gained many researchers' concerns globally. Researchers are using different modeling approaches to predict the RSV trend.
@@ -63,7 +80,7 @@ A case is defined by laboratory-confirmed RSV in a person who Lives in a defined
 
 -   Data set for this research is from RSV Hospitalization Surveillance Network (RSV-NET) (one of CDC research and surveillance platforms).
 
--   They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.\[8\]
+-   They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.
 
 -   RSV-NET has been collecting RSV-associated hospitalizations in adults and children since 2018-2019 season from 58 counties in 12 states, including California, Colorado, Connecticut, Georgia, Maryland, Michigan, Minnesota, New Mexico, New York, Oregon, Tennessee, and Utah.
 
@@ -96,6 +113,6 @@ Non-linear relationship between dependent and independent variables we add some 
 
 #### Polynomial Degree
 In statistics, polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x.
-
+   y = 𝛽0 + 𝛽1x1 + 𝛽2x12 + … + 𝛽nx1n
 ![](images/polynomial_regression_fit.gif){fig-align="center" width="600"}
 :::
