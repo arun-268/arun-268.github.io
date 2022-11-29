@@ -329,27 +329,69 @@
   <p class="author">Arun &amp; Zhongyi</p>
 </section>
 
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
-</section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section class="slide level2">
+
+<h3 class="smaller" id="introduction">Introduction</h3>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li class="fragment"><p>Respiratory Syncytial Virus (RSV) was discovered in 1956 and has been recognized as one of the most common causes of childhood illness.</p></li>
+<li class="fragment"><p>RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.</p></li>
+<li class="fragment"><p>According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations&nbsp;and 100 to 300 deaths among children under 5.</p></li>
 </ul>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-<div class="footer footer-default">
+<section class="slide level2">
+
+<h4 class="smaller" id="situation-in-usa">Situation in USA:</h4>
+<ul>
+<li class="fragment"><pre><code>In most regions of the United States, RSV circulation starts in the fall and peaks in the winter.</code></pre></li>
+</ul>
+
+<img data-src="images/paste-554DC9A6.png" width="500" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
+
+
+<img data-src="images/paste-F2E32D2F.png" width="600" class="r-stretch quarto-figure-center"><ul>
+<li class="fragment"><pre><code>With mask-wearing and physical distancing for COVID-19, there were fewer cases of RSV in 2020.</code></pre></li>
+<li class="fragment"><pre><code>RSV cases began to increase in spring 2021 when safety measures relaxed with the arrival of COVID-19 vaccines.</code></pre></li>
+<li class="fragment"><pre><code>This year, RSV in multiple U.S. regions are nearing seasonal peak levels.</code></pre></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 class="smaller" id="researches-so-far">Researches So Far!</h4>
+<ul>
+<li class="fragment"><pre><code>Respiratory syncytial virus (RSV) infection trend has gained many researchers' concerns globally. Researchers are using different modeling approaches to predict the RSV trend.</code></pre></li>
+<li class="fragment"><pre><code>Thongpan, Ilada - applied multivariate time-series analysis to show the possible prediction of RSV activity based on the climate in Thailand.</code></pre></li>
+<li class="fragment"><pre><code>Oren, Eyal - tracked RSV through internet search engine data using search filters and domain adaptation techniques to assist in identifying spread of both local and more widespread RSV transmission.</code></pre></li>
+<li class="fragment"><pre><code>Manuel, Britta - applied logistic regression to develop a prediction model and developed a web-based application to predict the individual probability of RSV infection.</code></pre></li>
+<li class="fragment"><pre><code>Reis, Julia - tried to built a real-time RSV prediction system using a susceptible-infectious-recovered (SIR) model in conjunction with an ensemble adjustment Kalman filter (EAKF) and 10 years CDC data^\[6\]^</code></pre></li>
+<li class="fragment"><pre><code>Corberán-Vallet : presented Bayesian stochastic susceptible‐infected‐recovered‐susceptible (SIRS) model to understand RSV dynamics in the region of Valencia, Spain.</code></pre></li>
+<li class="fragment"><pre><code>Leecaster, Molly - used simple linear regression to explore the relationship between three epidemic characteristics (final epidemic size, days to peak, and epidemic length)</code></pre></li>
+</ul>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>### Data Collection{.smaller} - Data set for this research is from <strong>RSV Hospitalization Surveillance Network (RSV-NET)</strong> (one of CDC research and surveillance platforms).</td>
+</tr>
+<tr class="even">
+<td>- They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.[8]</td>
+</tr>
+<tr class="odd">
+<td>- RSV-NET has been collecting RSV-associated hospitalizations in adults and children since 2018-2019 season from 58 counties in 12 states, including California, Colorado, Connecticut, Georgia, Maryland, Michigan, Minnesota, New Mexico, New York, Oregon, Tennessee, and Utah.</td>
+</tr>
+<tr class="even">
+<td>- Time frame: In season 2018-2019, 2019-2020, data collected is from October 1 to April 30. In season 2020-2021, 2021-2022, 2022-2023, data collected is from October 1 to October 1 next year.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="smaller" id="how-an-entry-is-made-in-data-set">How an entry is made in data set:</h3>
+<ul>
+<li class="fragment"><pre><code>A case is defined by laboratory-confirmed RSV in a person who Lives in a defined RSV-NET surveillance area AND Tests positive for RSV within 14 days before or during hospitalization.</code></pre></li>
+</ul>
+
+<img data-src="images/paste-B56B095E.png" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>
@@ -564,48 +606,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
