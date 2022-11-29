@@ -1,25 +1,26 @@
 ---
 title: "Presentation on Polynomial Regression"
 subtitle: "using CDC data with Application for Predicting RSV in USA"
-author: Arun & Zhongyi
+author: 
+    Arun & Zhongyi
 format: 
   revealjs:
     theme: moon
     incremental: true 
+    smaller: true
+    scrollable: true
 editor: visual
 ---
 
-### Introduction {.smaller}
+## Introduction {.smaller}
 
--   Respiratory Syncytial Virus (RSV) was discovered in 1956 and has been recognized as one of the most common causes of childhood illness.
+-       Respiratory Syncytial Virus (RSV) was discovered in 1956 and has been recognized as one of the most common causes of childhood illness.
 
--   RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.
+-       RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.
 
--   According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations and 100 to 300 deaths among children under 5.
+-       According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations and 100 to 300 deaths among children under 5.
 
----
-
-#### Situation in USA: {.smaller}
+## Situation in USA: {.smaller}
 
 -     In most regions of the United States, RSV circulation starts in the fall and peaks in the winter.
 
@@ -35,35 +36,44 @@ editor: visual
 
 -     This year, RSV in multiple U.S. regions are nearing seasonal peak levels.
 
----
 
-#### Researches So Far! {.smaller}
+## Other Research's {.smaller}
 
 -     Respiratory syncytial virus (RSV) infection trend has gained many researchers' concerns globally. Researchers are using different modeling approaches to predict the RSV trend.
 
--     Thongpan, Ilada - applied multivariate time-series analysis to show the possible prediction of RSV activity based on the climate in Thailand.
+-     Thongpan, Ilada: applied multivariate time-series analysis to show the possible prediction of RSV activity based on the climate in Thailand.
 
--     Oren, Eyal - tracked RSV through internet search engine data using search filters and domain adaptation techniques to assist in identifying spread of both local and more widespread RSV transmission.
+-     Manuel, Britta: applied logistic regression to develop a prediction model and developed a web-based application to predict the individual probability of RSV infection.
 
--     Manuel, Britta - applied logistic regression to develop a prediction model and developed a web-based application to predict the individual probability of RSV infection.
+-     Reis, Julia: tried to built a real-time RSV prediction system using a susceptible-infectious-recovered (SIR) model in conjunction with an ensemble adjustment Kalman filter (EAKF) and 10 years CDC data[6]
 
--     Reis, Julia - tried to built a real-time RSV prediction system using a susceptible-infectious-recovered (SIR) model in conjunction with an ensemble adjustment Kalman filter (EAKF) and 10 years CDC data^\[6\]^
+-     Corberán-Vallet: presented Bayesian stochastic susceptible‐infected‐recovered‐susceptible (SIRS) model to understand RSV dynamics in the region of Valencia, Spain.
 
--     Corberán-Vallet : presented Bayesian stochastic susceptible‐infected‐recovered‐susceptible (SIRS) model to understand RSV dynamics in the region of Valencia, Spain.
+-     Leecaster, Molly: used simple linear regression to explore the relationship between three epidemic characteristics (final epidemic size, days to peak, and epidemic length).
 
--     Leecaster, Molly - used simple linear regression to explore the relationship between three epidemic characteristics (final epidemic size, days to peak, and epidemic length)
 ---
-### Data Collection{.smaller}
--       Data set for this research is from **RSV Hospitalization Surveillance Network (RSV-NET)** (one of CDC research and surveillance platforms).
+### About Data 
+::: {.nonincremental} 
+A case is defined by laboratory-confirmed RSV in a person who Lives in a defined RSV-NET surveillance area AND Tests positive for RSV withn 14 days before or during hospitalization.
+:::
+::: {.panel-tabset}
+##### Data Collection
 
--       They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.\[8\]
+-     Data set for this research is from RSV Hospitalization Surveillance Network (RSV-NET) (one of CDC research and surveillance platforms).
 
--       RSV-NET has been collecting RSV-associated hospitalizations in adults and children since 2018-2019 season from 58 counties in 12 states, including California, Colorado, Connecticut, Georgia, Maryland, Michigan, Minnesota, New Mexico, New York, Oregon, Tennessee, and Utah.
+-     They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.\[8\]
 
--       Time frame: In season 2018-2019, 2019-2020, data collected is from October 1 to April 30. In season 2020-2021, 2021-2022, 2022-2023, data collected is from October 1 to October 1 next year.
----
-### How an entry is made in data set: {.smaller}
+-     RSV-NET has been collecting RSV-associated hospitalizations in adults and children since 2018-2019 season from 58 counties in 12 states, including California, Colorado, Connecticut, Georgia, Maryland, Michigan, Minnesota, New Mexico, New York, Oregon, Tennessee, and Utah.
 
--     A case is defined by laboratory-confirmed RSV in a person who Lives in a defined RSV-NET surveillance area AND Tests positive for RSV within 14 days before or during hospitalization.
+-     Time frame: In season 2018-2019, 2019-2020, data collected is from October 1 to April 30. In season 2020-2021, 2021-2022, 2022-2023, data collected is from October 1 to October 1 next year.
 
-![](images/paste-B56B095E.png)
+##### Initial Observation
+-       Data was last updated on 17th November 2022.
+-       Oneyear Data: Rate/wk for 52 weeks(YTD)
+-       Twoyear Data: Rate/wk for 104 weeks(YTD)
+
+##### Data Definition{.scrollable}
+
+![](images/paste-B56B095E.png){fig-align="center" width="500"}
+
+:::

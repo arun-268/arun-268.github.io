@@ -242,6 +242,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -329,18 +330,16 @@
   <p class="author">Arun &amp; Zhongyi</p>
 </section>
 
-<section class="slide level2">
-
-<h3 class="smaller" id="introduction">Introduction</h3>
+<section id="introduction" class="slide level2 smaller">
+<h2>Introduction</h2>
 <ul>
-<li class="fragment"><p>Respiratory Syncytial Virus (RSV) was discovered in 1956 and has been recognized as one of the most common causes of childhood illness.</p></li>
-<li class="fragment"><p>RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.</p></li>
-<li class="fragment"><p>According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations&nbsp;and 100 to 300 deaths among children under 5.</p></li>
+<li class="fragment"><pre><code>  Respiratory Syncytial Virus (RSV) was discovered in 1956 and has been recognized as one of the most common causes of childhood illness.</code></pre></li>
+<li class="fragment"><pre><code>  RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.</code></pre></li>
+<li class="fragment"><pre><code>  According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations&nbsp;and 100 to 300 deaths among children under 5.</code></pre></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<h4 class="smaller" id="situation-in-usa">Situation in USA:</h4>
+<section id="situation-in-usa" class="slide level2 smaller">
+<h2>Situation in USA:</h2>
 <ul>
 <li class="fragment"><pre><code>In most regions of the United States, RSV circulation starts in the fall and peaks in the winter.</code></pre></li>
 </ul>
@@ -355,43 +354,51 @@
 <li class="fragment"><pre><code>This year, RSV in multiple U.S. regions are nearing seasonal peak levels.</code></pre></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<h4 class="smaller" id="researches-so-far">Researches So Far!</h4>
+<section id="other-researchs" class="slide level2 smaller">
+<h2>Other Research’s</h2>
 <ul>
 <li class="fragment"><pre><code>Respiratory syncytial virus (RSV) infection trend has gained many researchers' concerns globally. Researchers are using different modeling approaches to predict the RSV trend.</code></pre></li>
-<li class="fragment"><pre><code>Thongpan, Ilada - applied multivariate time-series analysis to show the possible prediction of RSV activity based on the climate in Thailand.</code></pre></li>
-<li class="fragment"><pre><code>Oren, Eyal - tracked RSV through internet search engine data using search filters and domain adaptation techniques to assist in identifying spread of both local and more widespread RSV transmission.</code></pre></li>
-<li class="fragment"><pre><code>Manuel, Britta - applied logistic regression to develop a prediction model and developed a web-based application to predict the individual probability of RSV infection.</code></pre></li>
-<li class="fragment"><pre><code>Reis, Julia - tried to built a real-time RSV prediction system using a susceptible-infectious-recovered (SIR) model in conjunction with an ensemble adjustment Kalman filter (EAKF) and 10 years CDC data^\[6\]^</code></pre></li>
-<li class="fragment"><pre><code>Corberán-Vallet : presented Bayesian stochastic susceptible‐infected‐recovered‐susceptible (SIRS) model to understand RSV dynamics in the region of Valencia, Spain.</code></pre></li>
-<li class="fragment"><pre><code>Leecaster, Molly - used simple linear regression to explore the relationship between three epidemic characteristics (final epidemic size, days to peak, and epidemic length)</code></pre></li>
+<li class="fragment"><pre><code>Thongpan, Ilada: applied multivariate time-series analysis to show the possible prediction of RSV activity based on the climate in Thailand.</code></pre></li>
+<li class="fragment"><pre><code>Manuel, Britta: applied logistic regression to develop a prediction model and developed a web-based application to predict the individual probability of RSV infection.</code></pre></li>
+<li class="fragment"><pre><code>Reis, Julia: tried to built a real-time RSV prediction system using a susceptible-infectious-recovered (SIR) model in conjunction with an ensemble adjustment Kalman filter (EAKF) and 10 years CDC data[6]</code></pre></li>
+<li class="fragment"><pre><code>Corberán-Vallet: presented Bayesian stochastic susceptible‐infected‐recovered‐susceptible (SIRS) model to understand RSV dynamics in the region of Valencia, Spain.</code></pre></li>
+<li class="fragment"><pre><code>Leecaster, Molly: used simple linear regression to explore the relationship between three epidemic characteristics (final epidemic size, days to peak, and epidemic length).</code></pre></li>
 </ul>
-<table style="width:6%;">
-<colgroup>
-<col style="width: 5%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>### Data Collection{.smaller} - Data set for this research is from <strong>RSV Hospitalization Surveillance Network (RSV-NET)</strong> (one of CDC research and surveillance platforms).</td>
-</tr>
-<tr class="even">
-<td>- They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.[8]</td>
-</tr>
-<tr class="odd">
-<td>- RSV-NET has been collecting RSV-associated hospitalizations in adults and children since 2018-2019 season from 58 counties in 12 states, including California, Colorado, Connecticut, Georgia, Maryland, Michigan, Minnesota, New Mexico, New York, Oregon, Tennessee, and Utah.</td>
-</tr>
-<tr class="even">
-<td>- Time frame: In season 2018-2019, 2019-2020, data collected is from October 1 to April 30. In season 2020-2021, 2021-2022, 2022-2023, data collected is from October 1 to October 1 next year.</td>
-</tr>
-</tbody>
-</table>
-<h3 class="smaller" id="how-an-entry-is-made-in-data-set">How an entry is made in data set:</h3>
-<ul>
-<li class="fragment"><pre><code>A case is defined by laboratory-confirmed RSV in a person who Lives in a defined RSV-NET surveillance area AND Tests positive for RSV within 14 days before or during hospitalization.</code></pre></li>
-</ul>
+</section>
+<section class="slide level2">
 
-<img data-src="images/paste-B56B095E.png" class="r-stretch"><div class="footer footer-default">
+<h3 id="about-data">About Data</h3>
+<div>
+<p>A case is defined by laboratory-confirmed RSV in a person who Lives in a defined RSV-NET surveillance area AND Tests positive for RSV withn 14 days before or during hospitalization.</p>
+</div>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Data Collection</a></li><li><a href="#tabset-1-2">Initial Observation</a></li><li><a href="#tabset-1-3">Data Definition</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<ul>
+<li class="fragment"><pre><code>Data set for this research is from RSV Hospitalization Surveillance Network (RSV-NET) (one of CDC research and surveillance platforms).</code></pre></li>
+<li class="fragment"><pre><code>They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.\[8\]</code></pre></li>
+<li class="fragment"><pre><code>RSV-NET has been collecting RSV-associated hospitalizations in adults and children since 2018-2019 season from 58 counties in 12 states, including California, Colorado, Connecticut, Georgia, Maryland, Michigan, Minnesota, New Mexico, New York, Oregon, Tennessee, and Utah.</code></pre></li>
+<li class="fragment"><pre><code>Time frame: In season 2018-2019, 2019-2020, data collected is from October 1 to April 30. In season 2020-2021, 2021-2022, 2022-2023, data collected is from October 1 to October 1 next year.</code></pre></li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<ul>
+<li class="fragment"><pre><code>  Data was last updated on 17th November 2022.</code></pre></li>
+<li class="fragment"><pre><code>  Oneyear Data: Rate/wk for 52 weeks(YTD)</code></pre></li>
+<li class="fragment"><pre><code>  Twoyear Data: Rate/wk for 104 weeks(YTD)</code></pre></li>
+</ul>
+</div>
+<div id="tabset-1-3" class="scrollable">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/paste-B56B095E.png" width="500"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer footer-default">
 
 </div>
 </section>
@@ -421,13 +428,13 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
+'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
