@@ -260,4 +260,12 @@ We can conclude that the model created is `a good fit`. It also can be shown at 
 ![](images/PredictionEq.png){.absolute top=200 left=80 width="700" height="400"}
 ![](images/Predicted.png){.absolute top=200 right=60 width="600" height="500"}
 
-## Conclusion:
+## Conclusion
+
+We have built a model that has a well fit (`multiple R square =0.9606 and RMSE=0.16`). Also, next 3 month (11/14/2022-2/5/2023) RSV hospitalization rates were calculated.
+
+Compared the model based on the data with one year span with two year span, we found that using one year-to-date data is a better solution to model the RSV hospitalization rates.
+
+Our data set includes 58 counties in 12 states from 2018 to now. More data containing the other states will give us more precise prediction of how respiratory syncytial virus evolved and spread in USA.
+
+Our model created from polynomial regression analysis may have a good fit within certain range of the data we selected, but for outside the range of the data, the prediction might not be accurate. To gain a better accurate prediction, people need to repeatedly generate new models.
