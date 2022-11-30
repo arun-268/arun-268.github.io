@@ -285,7 +285,7 @@ Y = 0.917 + 0.312Week - 0.074Week^2^ + 0.0054Week^3^ - 0.00018Week^4^ + 0.000002
 -   We have built a model that has a well fit (`multiple R square =0.9606 and RMSE=0.16`). Also, next 3 month (11/14/2022-2/5/2023) RSV hospitalization rates were calculated.
 :::
 ::: {.fragment .fade-in .highlight-current-green}
--   Compared the model based on the data with one year span with two year span, we found that using one year-to-date data is a `better solution` to model the RSV hospitalization rates.
+-   Compared the model based on the data with one year span with two year span, we found that using one year-to-date data `might be a better solution` to model the RSV hospitalization rates.
 :::
 ::: {.fragment .fade-in .highlight-current-green}
 -   Our data set includes 58 counties in 12 states from 2018 to now. More data containing the other states will give us more precise prediction of how respiratory syncytial virus evolved and spread in USA.
