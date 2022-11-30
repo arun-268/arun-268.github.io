@@ -25,7 +25,7 @@ editor: visual
 
 -   RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.
 
--   According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations and 100 to 300 deaths among children under 5.
+-   According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations and 100 to 300 deaths among children under 5.
 
 ## Trend in USA {.smaller}
 
@@ -120,3 +120,144 @@ In statistics, polynomial regression is a form of regression analysis in which t
 
 ![](images/polynomial_regression_fit.gif){.absolute top=350 left=50 width="700"}
 :::
+
+## Data Analysis and Results
+
+#### Data Distribution
+-   To build a model to predict RSV hospitalization rate, what range of data to be included. one year or two year.
+
+::: {.panel-tabset}
+#### 2018-2022
+:::: {.columns}
+
+::: {.column width="60%"}
+::: {.fragment .fade-in}
+-   Data distribution of RSV hospitalization rates from 2018 to till date. 
+
+![](images/Data Distribution.png){.absolute top=330 left=50 width="900" height="500"}
+
+:::
+:::
+
+::: {.column width="40%" top=350}
+::: {.fragment .fade-in}
+
+##### Legend:
+      orange: 2018-2019 
+       green: 2019-2020
+        pink: 2020-2021 
+      purple: 2021-2022
+       brown: 2022-2023
+:::
+:::
+::::
+#### 2021-2022(1-yr)
+
+:::: {.columns}
+
+::: {.column width="60%"}
+::: {.fragment .fade-in}
+-   Data was examined before our modeling, including checking for missing values and removing outlines.
+:::
+::: {.fragment .fade-in}
+![](images/OneYrData.png){.absolute top=370 left=25 width="900" height="500"}
+:::
+:::
+
+::: {.column width="40%"}
+
+    
+-   One-year-to-date data distribution with a curve line. 
+-   We can see that the straight line is unable to capture the patterns in the data. 
+-   Data is being `under-fitting`.
+-   Polynomial regression is needed to increase the complexity of the model.
+:::
+::::
+
+#### 2020 -2022(2-Yr)
+
+:::: {.columns}
+
+::: {.column width="60%"}
+::: {.fragment .fade-in}
+Two-year-to-date data distribution with a curve line was shown below.
+:::
+::: {.fragment .fade-in}
+![](images/TwoYrData.png){.absolute top=350 left=25 width="900" height="500"}
+
+:::
+:::
+::: {.column width="40%"}
+-   Data is `under-fitting`.
+-   Polynomial regression is needed to increase the complexity of the model.
+:::
+::::
+:::
+---
+### Polynomial Regression
+:::: {.columns}
+
+::: {.column width="50%"}
+###### One year (2021-2022)
+
+-   The best model we looking for is the one with high multiple R square `(0.9606)` and low RMSE `(0.16)`, so we select the model with degree of `6`.
+
+![](images/polyreg1Yr.png){.absolute top=300 left=25 width="700" height="400"}
+
+:::
+
+::: {.column width="50%"}
+
+###### Two Year (2020-2022)
+
+-   The best model for the most recent two year data  is at the degree of `5` with multiple r-square `0.92` and error `0.24`.
+
+![](images/polyreg2Yr.png){.absolute top=300 right=25 width="700" height="400"}
+
+:::
+::::
+
+## Polynomial Regression
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/CompareModel.png){.absolute top=200 left=25 width="700" height="500"}
+
+:::
+
+::: {.column width="50%"}
+![](images/MSE.png){.absolute top=300 right=200 width="500" height="200"}
+
+By comparison the two year-to-date data with the one year-to-date data, it shows that building RSV hospitalization rate model containing most recent `one year data` create the `best prediction model`.
+
+:::
+::::
+
+## Model Performance
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Model for RSV hospitalization rate from `Nov, 2021` to `Nov, 2022` is, 
+
+![](images/ModelPerformance.png){.absolute top=250 left=20 width="700" height="400"}
+
+:::
+::: {.column width="50%"}
+
+When we compare the actual hospitalization with the predicted value from our model, we can get the numbers as follows. 
+
+![](images/ActVSPred.png){.absolute top=250 right=180 width="400" height="300"}
+:::
+::::
+
+## Final Model
+We can conclude that the model created is `a good fit`. It also can be shown at the graph below.
+![](images/FinalModel.png){.absolute top=250 left=80 width="800" height="500"}
+
+
+## Prediction
+![](images/PredictionEq.png){.absolute top=200 left=80 width="700" height="400"}
+![](images/Predicted.png){.absolute top=200 right=60 width="600" height="500"}
+
+## Conclusion:

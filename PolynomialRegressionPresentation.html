@@ -337,7 +337,7 @@
 <ul>
 <li class="fragment"><p>Respiratory Syncytial Virus (RSV) was discovered in 1956 and has been recognized as one of the most common causes of childhood illness.</p></li>
 <li class="fragment"><p>RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.</p></li>
-<li class="fragment"><p>According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations&nbsp;and 100 to 300 deaths among children under 5.</p></li>
+<li class="fragment"><p>According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations and 100 to 300 deaths among children under 5.</p></li>
 </ul>
 </section>
 <section id="trend-in-usa" class="slide level2 smaller">
@@ -452,6 +452,131 @@
 </div>
 </div>
 </div>
+</section>
+<section id="data-analysis-and-results" class="slide level2">
+<h2>Data Analysis and Results</h2>
+<h4 id="data-distribution">Data Distribution</h4>
+<ul>
+<li class="fragment">To build a model to predict RSV hospitalization rate, what range of data to be included. one year or two year.</li>
+</ul>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">2018-2022</a></li><li><a href="#tabset-4-2">2021-2022(1-yr)</a></li><li><a href="#tabset-4-3">2020 -2022(2-Yr)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="fragment fade-in">
+<ul>
+<li class="fragment">Data distribution of RSV hospitalization rates from 2018 to till date.</li>
+</ul>
+<p><img data-src="images/Data%20Distribution.png" class="absolute" style="top: 330px; left: 50px; width: 900px; height: 500px; "></p>
+</div>
+</div><div class="column" data-top="350" style="width:40%;">
+<div class="fragment fade-in">
+<!-- -->
+<h5 id="legend">Legend:</h5>
+<pre><code>  orange: 2018-2019 
+   green: 2019-2020
+    pink: 2020-2021 
+  purple: 2021-2022
+   brown: 2022-2023</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="fragment fade-in">
+<ul>
+<li class="fragment">Data was examined before our modeling, including checking for missing values and removing outlines.</li>
+</ul>
+</div>
+<div class="fragment fade-in">
+<p><img data-src="images/OneYrData.png" class="absolute" style="top: 370px; left: 25px; width: 900px; height: 500px; "></p>
+</div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li class="fragment">One-year-to-date data distribution with a curve line.</li>
+<li class="fragment">We can see that the straight line is unable to capture the patterns in the data.</li>
+<li class="fragment">Data is being <code>under-fitting</code>.</li>
+<li class="fragment">Polynomial regression is needed to increase the complexity of the model.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="tabset-4-3">
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="fragment fade-in">
+<p>Two-year-to-date data distribution with a curve line was shown below.</p>
+</div>
+<div class="fragment fade-in">
+<p><img data-src="images/TwoYrData.png" class="absolute" style="top: 350px; left: 25px; width: 900px; height: 500px; "></p>
+</div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li class="fragment">Data is <code>under-fitting</code>.</li>
+<li class="fragment">Polynomial regression is needed to increase the complexity of the model.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="polynomial-regression">Polynomial Regression</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h6 id="one-year-2021-2022">One year (2021-2022)</h6>
+<ul>
+<li class="fragment">The best model we looking for is the one with high multiple R square <code>(0.9606)</code> and low RMSE <code>(0.16)</code>, so we select the model with degree of <code>6</code>.</li>
+</ul>
+<p><img data-src="images/polyreg1Yr.png" class="absolute" style="top: 300px; left: 25px; width: 700px; height: 400px; "></p>
+</div><div class="column" style="width:50%;">
+<h6 id="two-year-2020-2022">Two Year (2020-2022)</h6>
+<ul>
+<li class="fragment">The best model for the most recent two year data is at the degree of <code>5</code> with multiple r-square <code>0.92</code> and error <code>0.24</code>.</li>
+</ul>
+<p><img data-src="images/polyreg2Yr.png" class="absolute" style="top: 300px; right: 25px; width: 700px; height: 400px; "></p>
+</div>
+</div>
+</section>
+<section id="polynomial-regression-1" class="slide level2">
+<h2>Polynomial Regression</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/CompareModel.png" class="absolute" style="top: 200px; left: 25px; width: 700px; height: 500px; "></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/MSE.png" class="absolute" style="top: 300px; right: 200px; width: 500px; height: 200px; "></p>
+<p>By comparison the two year-to-date data with the one year-to-date data, it shows that building RSV hospitalization rate model containing most recent <code>one year data</code> create the <code>best prediction model</code>.</p>
+</div>
+</div>
+</section>
+<section id="model-performance" class="slide level2">
+<h2>Model Performance</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Model for RSV hospitalization rate from <code>Nov, 2021</code> to <code>Nov, 2022</code> is,</p>
+<p><img data-src="images/ModelPerformance.png" class="absolute" style="top: 250px; left: 20px; width: 700px; height: 400px; "></p>
+</div><div class="column" style="width:50%;">
+<p>When we compare the actual hospitalization with the predicted value from our model, we can get the numbers as follows.</p>
+<p><img data-src="images/ActVSPred.png" class="absolute" style="top: 250px; right: 180px; width: 400px; height: 300px; "></p>
+</div>
+</div>
+</section>
+<section id="final-model" class="slide level2">
+<h2>Final Model</h2>
+<p>We can conclude that the model created is <code>a good fit</code>. It also can be shown at the graph below. <img data-src="images/FinalModel.png" class="absolute" style="top: 250px; left: 80px; width: 800px; height: 500px; "></p>
+</section>
+<section id="prediction" class="slide level2">
+<h2>Prediction</h2>
+<p><img data-src="images/PredictionEq.png" class="absolute" style="top: 200px; left: 80px; width: 700px; height: 400px; "> <img data-src="images/Predicted.png" class="absolute" style="top: 200px; right: 60px; width: 600px; height: 500px; "></p>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion:</h2>
 <div class="footer footer-default">
 
 </div>
