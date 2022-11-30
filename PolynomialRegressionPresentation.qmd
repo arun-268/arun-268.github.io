@@ -58,7 +58,7 @@ editor: visual
 :::
 ::::
 :::
-## Other Research's {.smaller}
+## Research using RSV Data {.smaller}
 
 Respiratory syncytial virus (RSV) infection trend has gained many researchers' concerns globally. Researchers are using different modeling approaches to predict the RSV trend.
 
