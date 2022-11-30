@@ -575,39 +575,49 @@
 <h2>Prediction</h2>
 <p>We have got our model with the equation for the RSV hospitalization rate using last one year data:</p>
 <h4 class="smaller" id="rsv-hospitalization-ratey">RSV Hospitalization Rate(y):</h4>
-<p>Y = <code>0.917 + 0.312Week - 0.074Week^2^ + 0.0054Week^3^ - 0.00018Week^4^ + 0.0000027Week^5^ - 0.000000015Week^6^</code></p>
+<div class="fragment highlight-green">
+<p>Y = 0.917 + 0.312Week - 0.074Week<sup>2</sup> + 0.0054Week<sup>3</sup> - 0.00018Week<sup>4</sup> + 0.0000027Week<sup>5</sup> - 0.000000015Week<sup>6</sup></p>
+</div>
+<div class="fragment fade-up highlight-current-green">
 <ul>
-<li class="fragment"><p>RSV hospitalization rates in the next three months. A table is listed below to show the trend.</p></li>
-<li class="fragment"><p>Following the trend in our model, rates keep going up and a <code>rate of 9</code> could be reached at the beginning of next year.</p></li>
+<li class="fragment">RSV hospitalization rates in the next three months. A table is listed below to show the trend.</li>
 </ul>
+</div>
+<div class="fragment fade-up highlight-current-green">
+<ul>
+<li class="fragment">Following the trend in our model, rates keep going up and a <code>rate of 9</code> could be reached at the beginning of next year.</li>
+</ul>
+</div>
 <p><img data-src="images/Predicted.png" class="absolute" style="top: 370px; left: 150px; width: 600px; height: 500px; "></p>
 </section>
 <section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
-<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-in highlight-current-green">
 <ul>
 <li class="fragment">We have built a model that has a well fit (<code>multiple R square =0.9606 and RMSE=0.16</code>). Also, next 3 month (11/14/2022-2/5/2023) RSV hospitalization rates were calculated.</li>
 </ul>
 </div>
-<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-in highlight-current-green">
 <ul>
 <li class="fragment">Compared the model based on the data with one year span with two year span, we found that using one year-to-date data is a <code>better solution</code> to model the RSV hospitalization rates.</li>
 </ul>
 </div>
-<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-in highlight-current-green">
 <ul>
 <li class="fragment">Our data set includes 58 counties in 12 states from 2018 to now. More data containing the other states will give us more precise prediction of how respiratory syncytial virus evolved and spread in USA.</li>
 </ul>
 </div>
-<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-in highlight-current-green">
 <ul>
 <li class="fragment">Our model created from polynomial regression analysis may have a good fit within certain range of the data we selected, but for outside the range of the data, the prediction might not be accurate.</li>
 </ul>
 </div>
-<div class="fragment fade-in highlight-green" data-fragment-index="1">
+<div class="fragment fade-in highlight-blue">
+<div class="fragment fade-in highlight-green">
 <ul>
 <li class="fragment">To gain a better accurate prediction, people need to repeatedly generate new models.</li>
 </ul>
+</div>
 </div>
 <div class="footer footer-default">
 
