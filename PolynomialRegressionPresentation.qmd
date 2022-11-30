@@ -1,6 +1,6 @@
 ---
 title: "Polynomial Regression"
-subtitle: "using CDC data Predict RSV in USA"
+subtitle: "Predict RSV in USA using CDC data"
 author: 
  Arun  &
  Zhongyi
@@ -21,11 +21,11 @@ editor: visual
 
 ## Introduction {.smaller}
 
--   Respiratory Syncytial Virus (RSV) was discovered in 1956 and has been recognized as one of the most common causes of childhood illness.
+-   Respiratory Syncytial Virus (RSV) was discovered in the year 1956 and has been recognized as one of the most common causes of childhood illness.
 
 -   RSV symptoms usually look like a common cold, but it can be serious leading to bronchiolitis (inflammation of the small airways in the lung) and pneumonia, especially for infants and older adults.
 
--   According to CDC(Center for Disease Control)RSV results in around 58,000 annual hospitalizations and 100 to 300 deaths among children under 5.
+-   According to CDC(Center for Disease Control)RSV results around 58,000 hospitalizations annually and 100 to 300 deaths among children under 5.
 
 ## Trend in USA {.smaller}
 
@@ -252,7 +252,7 @@ When we compare the actual hospitalization with the predicted value from our mod
 ::::
 
 ## Final Model
-We can conclude that the model created is `a good fit`. It also can be shown at the graph below.
+We can conclude that the model created is a `good fit`. It also can be shown at the graph below.
 ![](images/FinalModel.png){.absolute top=250 left=80 width="800" height="500"}
 
 
