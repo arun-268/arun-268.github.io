@@ -1,7 +1,9 @@
 ---
 title: "Polynomial Regression"
 subtitle: "using CDC data Predict RSV in USA"
-author: Arun  &  Zhongyi
+author: 
+ Arun  &
+ Zhongyi
 format: 
   revealjs:
     slide-number: true
@@ -114,7 +116,7 @@ Non-linear relationship between dependent and independent variables we add some 
 #### Polynomial Degree
 In statistics, polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x.
 
-![](images/equation.png){fig-align="center" width="400"}
+![](images/equation.png){.absolute top=550 right=300 width="500" height=50}
 
-![](images/polynomial_regression_fit.gif){fig-align="center" width="600"}
+![](images/polynomial_regression_fit.gif){.absolute top=350 left=50 width="700"}
 :::
