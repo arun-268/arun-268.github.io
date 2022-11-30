@@ -75,7 +75,7 @@ Respiratory syncytial virus (RSV) infection trend has gained many researchers' c
 
 ## About Data 
 ::: {.nonincremental} 
-A case is defined by laboratory-confirmed RSV in a person who Lives in a defined RSV-NET surveillance area and Tests positive for RSV withn 14 days before or during hospitalization.
+A case is defined by laboratory-confirmed RSV in a person who lives in a defined RSV-NET surveillance area and Tests positive for RSV withn 14 days before or during hospitalization.
 :::
 ::: {.panel-tabset}
 ##### Data Collection
