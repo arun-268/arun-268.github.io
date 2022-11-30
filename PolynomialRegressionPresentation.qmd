@@ -60,7 +60,7 @@ editor: visual
 :::
 ## Other Research's {.smaller}
 
--   Respiratory syncytial virus (RSV) infection trend has gained many researchers' concerns globally. Researchers are using different modeling approaches to predict the RSV trend.
+Respiratory syncytial virus (RSV) infection trend has gained many researchers' concerns globally. Researchers are using different modeling approaches to predict the RSV trend.
 
 -   Thongpan, Ilada: applied multivariate time-series analysis to show the possible prediction of RSV activity based on the climate in Thailand.
 
@@ -252,20 +252,39 @@ When we compare the actual hospitalization with the predicted value from our mod
 ::::
 
 ## Final Model
-We can conclude that the model created is a `good fit`. It also can be shown at the graph below.
+We can conclude that the model created is a `good fit`. It is shown as a graph below.
 ![](images/FinalModel.png){.absolute top=250 left=80 width="800" height="500"}
 
 
 ## Prediction
-![](images/PredictionEq.png){.absolute top=200 left=80 width="700" height="400"}
-![](images/Predicted.png){.absolute top=200 right=60 width="600" height="500"}
+We have got our model with the equation for the RSV hospitalization rate using last one year data:
+
+#### RSV Hospitalization Rate(y):{.smaller}
+
+Y = `0.917 + 0.312Week - 0.074Week^2^ + 0.0054Week^3^ - 0.00018Week^4^ + 0.0000027Week^5^ - 0.000000015Week^6^`
+
+-   RSV hospitalization rates in the next three months. A table is listed below to show the trend. 
+
+-   Following the trend in our model, rates keep going up and a `rate of 9` could be reached at the beginning of next year.
+
+
+![](images/Predicted.png){.absolute top=370 left=150 width="600" height="500"}
 
 ## Conclusion
 
-We have built a model that has a well fit (`multiple R square =0.9606 and RMSE=0.16`). Also, next 3 month (11/14/2022-2/5/2023) RSV hospitalization rates were calculated.
+::: {.fragment .fade-in fragment-index=1}
+-   We have built a model that has a well fit (`multiple R square =0.9606 and RMSE=0.16`). Also, next 3 month (11/14/2022-2/5/2023) RSV hospitalization rates were calculated.
+:::
+::: {.fragment .fade-in fragment-index=1}
+-   Compared the model based on the data with one year span with two year span, we found that using one year-to-date data is a `better solution` to model the RSV hospitalization rates.
+:::
+::: {.fragment .fade-in fragment-index=1}
+-   Our data set includes 58 counties in 12 states from 2018 to now. More data containing the other states will give us more precise prediction of how respiratory syncytial virus evolved and spread in USA.
+:::
+::: {.fragment .fade-in fragment-index=1}
+-   Our model created from polynomial regression analysis may have a good fit within certain range of the data we selected, but for outside the range of the data, the prediction might not be accurate.
+:::
+::: {.fragment .fade-in .highlight-green fragment-index=1}
+-   To gain a better accurate prediction, people need to repeatedly generate new models.
+:::
 
-Compared the model based on the data with one year span with two year span, we found that using one year-to-date data is a better solution to model the RSV hospitalization rates.
-
-Our data set includes 58 counties in 12 states from 2018 to now. More data containing the other states will give us more precise prediction of how respiratory syncytial virus evolved and spread in USA.
-
-Our model created from polynomial regression analysis may have a good fit within certain range of the data we selected, but for outside the range of the data, the prediction might not be accurate. To gain a better accurate prediction, people need to repeatedly generate new models.

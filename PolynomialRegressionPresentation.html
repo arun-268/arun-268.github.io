@@ -382,8 +382,8 @@
 </section>
 <section id="other-researchs" class="slide level2 smaller">
 <h2>Other Research’s</h2>
+<p>Respiratory syncytial virus (RSV) infection trend has gained many researchers’ concerns globally. Researchers are using different modeling approaches to predict the RSV trend.</p>
 <ul>
-<li class="fragment"><p>Respiratory syncytial virus (RSV) infection trend has gained many researchers’ concerns globally. Researchers are using different modeling approaches to predict the RSV trend.</p></li>
 <li class="fragment"><p>Thongpan, Ilada: applied multivariate time-series analysis to show the possible prediction of RSV activity based on the climate in Thailand.</p></li>
 <li class="fragment"><p>Manuel, Britta: applied logistic regression to develop a prediction model and developed a web-based application to predict the individual probability of RSV infection.</p></li>
 <li class="fragment"><p>Reis, Julia: tried to built a real-time RSV prediction system using a susceptible-infectious-recovered (SIR) model in conjunction with an ensemble adjustment Kalman filter (EAKF) and 10 years CDC data[6]</p></li>
@@ -569,18 +569,46 @@
 </section>
 <section id="final-model" class="slide level2">
 <h2>Final Model</h2>
-<p>We can conclude that the model created is a <code>good fit</code>. It also can be shown at the graph below. <img data-src="images/FinalModel.png" class="absolute" style="top: 250px; left: 80px; width: 800px; height: 500px; "></p>
+<p>We can conclude that the model created is a <code>good fit</code>. It is shown as a graph below. <img data-src="images/FinalModel.png" class="absolute" style="top: 250px; left: 80px; width: 800px; height: 500px; "></p>
 </section>
 <section id="prediction" class="slide level2">
 <h2>Prediction</h2>
-<p><img data-src="images/PredictionEq.png" class="absolute" style="top: 200px; left: 80px; width: 700px; height: 400px; "> <img data-src="images/Predicted.png" class="absolute" style="top: 200px; right: 60px; width: 600px; height: 500px; "></p>
+<p>We have got our model with the equation for the RSV hospitalization rate using last one year data:</p>
+<h4 class="smaller" id="rsv-hospitalization-ratey">RSV Hospitalization Rate(y):</h4>
+<p>Y = <code>0.917 + 0.312Week - 0.074Week^2^ + 0.0054Week^3^ - 0.00018Week^4^ + 0.0000027Week^5^ - 0.000000015Week^6^</code></p>
+<ul>
+<li class="fragment"><p>RSV hospitalization rates in the next three months. A table is listed below to show the trend.</p></li>
+<li class="fragment"><p>Following the trend in our model, rates keep going up and a <code>rate of 9</code> could be reached at the beginning of next year.</p></li>
+</ul>
+<p><img data-src="images/Predicted.png" class="absolute" style="top: 370px; left: 150px; width: 600px; height: 500px; "></p>
 </section>
 <section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
-<p>We have built a model that has a well fit (<code>multiple R square =0.9606 and RMSE=0.16</code>). Also, next 3 month (11/14/2022-2/5/2023) RSV hospitalization rates were calculated.</p>
-<p>Compared the model based on the data with one year span with two year span, we found that using one year-to-date data is a better solution to model the RSV hospitalization rates.</p>
-<p>Our data set includes 58 counties in 12 states from 2018 to now. More data containing the other states will give us more precise prediction of how respiratory syncytial virus evolved and spread in USA.</p>
-<p>Our model created from polynomial regression analysis may have a good fit within certain range of the data we selected, but for outside the range of the data, the prediction might not be accurate. To gain a better accurate prediction, people need to repeatedly generate new models.</p>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li class="fragment">We have built a model that has a well fit (<code>multiple R square =0.9606 and RMSE=0.16</code>). Also, next 3 month (11/14/2022-2/5/2023) RSV hospitalization rates were calculated.</li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li class="fragment">Compared the model based on the data with one year span with two year span, we found that using one year-to-date data is a <code>better solution</code> to model the RSV hospitalization rates.</li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li class="fragment">Our data set includes 58 counties in 12 states from 2018 to now. More data containing the other states will give us more precise prediction of how respiratory syncytial virus evolved and spread in USA.</li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li class="fragment">Our model created from polynomial regression analysis may have a good fit within certain range of the data we selected, but for outside the range of the data, the prediction might not be accurate.</li>
+</ul>
+</div>
+<div class="fragment fade-in highlight-green" data-fragment-index="1">
+<ul>
+<li class="fragment">To gain a better accurate prediction, people need to repeatedly generate new models.</li>
+</ul>
+</div>
 <div class="footer footer-default">
 
 </div>
