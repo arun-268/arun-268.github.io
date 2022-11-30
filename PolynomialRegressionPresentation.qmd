@@ -75,12 +75,12 @@ Respiratory syncytial virus (RSV) infection trend has gained many researchers' c
 
 ## About Data 
 ::: {.nonincremental} 
-A case is defined by laboratory-confirmed RSV in a person who lives in a defined RSV-NET surveillance area and Tests positive for RSV withn 14 days before or during hospitalization.
+Data set for this research is from RSV Hospitalization Surveillance Network (RSV-NET) (one of CDC research and surveillance platforms).
 :::
 ::: {.panel-tabset}
 ##### Data Collection
 
--   Data set for this research is from RSV Hospitalization Surveillance Network (RSV-NET) (one of CDC research and surveillance platforms).
+-   A case is defined by laboratory-confirmed RSV in a person who lives in a defined RSV-NET surveillance area and Tests positive for RSV withn 14 days before or during hospitalization.
 
 -   They conduct population-based surveillance system for laboratory-confirmed COVID-19, RSV, and influenza-associated hospitalizations in the US among children younger than 18 years of age and adults.
 
