@@ -228,7 +228,7 @@ Two-year-to-date data distribution with a curve line was shown below.
 ::: {.column width="50%"}
 ![](images/MSE.png){.absolute top=300 right=200 width="500" height="200"}
 
-By comparison the two year-to-date data with the one year-to-date data, it shows that building RSV hospitalization rate model containing most recent `one year data` create the `best prediction model`.
+By comparing the two datasets, two year-to-date data with the one year-to-date data, it shows that building RSV hospitalization rate model containing most recent `one year data` creates a `best prediction model`.
 
 :::
 ::::
