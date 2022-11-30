@@ -198,8 +198,9 @@ Two-year-to-date data distribution with a curve line was shown below.
 :::: {.columns}
 
 ::: {.column width="50%"}
-###### One year (2021-2022)
-
+::: {.fragment .highlight-green}
+One year (2021-2022)
+:::
 -   The best model we looking for is the one with high multiple R square `(0.9606)` and low RMSE `(0.16)`, so we select the model with degree of `6`.
 
 ![](images/polyreg1Yr.png){.absolute top=300 left=25 width="700" height="400"}
@@ -208,8 +209,9 @@ Two-year-to-date data distribution with a curve line was shown below.
 
 ::: {.column width="50%"}
 
-###### Two Year (2020-2022)
-
+::: {.fragment .highlight-green}
+Two Year (2020-2022)
+:::
 -   The best model for the most recent two year data  is at the degree of `5` with multiple r-square `0.92` and error `0.24`.
 
 ![](images/polyreg2Yr.png){.absolute top=300 right=25 width="700" height="400"}
@@ -244,9 +246,9 @@ Model for RSV hospitalization rate from `Nov, 2021` to `Nov, 2022` is,
 
 :::
 ::: {.column width="50%"}
-
+::: {.fragment .highlight-current-green}
 When we compare the actual hospitalization with the predicted value from our model, we can get the numbers as follows. 
-
+:::
 ![](images/ActVSPred.png){.absolute top=250 right=180 width="400" height="300"}
 :::
 ::::
