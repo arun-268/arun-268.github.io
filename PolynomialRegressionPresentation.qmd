@@ -104,6 +104,7 @@ Simple Linear Regression algorithm only works when the relationship between the 
 
 ::: {.panel-tabset}
 #### Non-Linear Data
+Consider the below diagram which has a non-linear relationship and you can see the Linear regression results on it, which does not perform well and doesn’t come close to reality.
 
 ![](images/Non-Linear.gif){fig-align="center" width="600"}
 
